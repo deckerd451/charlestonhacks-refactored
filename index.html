@@ -61,6 +61,7 @@
       };
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- The importmap was removed as it conflicts with the UMD/Babel setup. -->
 <script type="importmap">
 {
   "imports": {
@@ -73,17 +74,20 @@
 </script>
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+    </div>
     
-    <!-- Load React, ReactDOM, and Supabase as global scripts -->
+    <!-- This app uses a "no-build" setup. -->
+    <!-- 1. Global libraries are loaded via UMD scripts. -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 
-    <!-- Include Babel Standalone for in-browser TSX transpilation -->
+    <!-- 2. Babel Standalone transpiles TSX code in the browser. -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
-    <!-- Set script type to "text/babel" and add presets for React and TypeScript -->
+    <!-- 3. The main application script is loaded with type="text/babel". -->
     <script type="text/babel" data-presets="react,typescript" src="./index.tsx"></script>
   </body>
 </html>
