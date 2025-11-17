@@ -1,0 +1,5 @@
+{
+  "name": "AI Innovation Hub",
+  "description": "A modern web application showcasing user profiles, skill leaderboards, and a neural network visualization, optimized from a legacy CSS file into a sleek React and Tailwind CSS experience.",
+  "requestFramePermissions": []
+}

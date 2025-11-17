@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Innovation Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#FF0000',
+              'secondary': '#879EF2',
+              'gold': '#ffd700',
+              'brand-cyan': '#00CFFF',
+              'brand-pink': '#FF69B4',
+              'card-bg': '#1e1e2f',
+              'card-bg-light': '#2a2a3a',
+            },
+            fontFamily: {
+              'sans': ['Britannic Bold', 'Arial', 'sans-serif'],
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              fadeInScaleUp: {
+                '0%': { opacity: '0', transform: 'scale(0.8)' },
+                '100%': { opacity: '1', transform: 'scale(1.15)' },
+              },
+              glow: {
+                '0%, 100%': { 'box-shadow': '0 0 0px rgba(255, 215, 0, 0.8)' },
+                '50%': { 'box-shadow': '0 0 20px rgba(255, 215, 0, 1)' },
+              },
+              bounceIn: {
+                '0%': { transform: 'scale(0.5)', opacity: '0' },
+                '60%': { transform: 'scale(1.1)', opacity: '1' },
+                '100%': { transform: 'scale(1)' },
+              }
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.8s ease forwards',
+              'fade-in-scale-up': 'fadeInScaleUp 1s ease-out forwards',
+              'glow': 'glow 0.45s ease-in-out',
+              'bounce-in': 'bounceIn 1s ease',
+            },
+          },
+        },
+        plugins: [
+            function({ addUtilities }) {
+                addUtilities({
+                    '.transform-style-3d': { 'transform-style': 'preserve-3d' },
+                    '.perspective-1000': { 'perspective': '1000px' },
+                    '.backface-hidden': { 'backface-visibility': 'hidden' },
+                    '.rotate-y-180': { 'transform': 'rotateY(180deg)' },
+                })
+            }
+        ]
+      };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@supabase/supabase-js": "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.44.2/+esm"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
